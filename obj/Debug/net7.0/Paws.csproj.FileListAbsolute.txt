@@ -1,0 +1,12 @@
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.csproj.AssemblyReference.cache
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.GeneratedMSBuildEditorConfig.editorconfig
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.AssemblyInfoInputs.cache
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.AssemblyInfo.cs
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.csproj.CoreCompileInputs.cache
+/data/dev/csharp/Paws/bin/Debug/net7.0/Paws.deps.json
+/data/dev/csharp/Paws/bin/Debug/net7.0/Paws.dll
+/data/dev/csharp/Paws/bin/Debug/net7.0/Paws.pdb
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.dll
+/data/dev/csharp/Paws/obj/Debug/net7.0/refint/Paws.dll
+/data/dev/csharp/Paws/obj/Debug/net7.0/Paws.pdb
+/data/dev/csharp/Paws/obj/Debug/net7.0/ref/Paws.dll
