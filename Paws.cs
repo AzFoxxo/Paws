@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Paws;
 
-public class Paws
+public static class PawsLogger
 {
     private static Levels _DefaultLevel;
     private static bool _logToFile;
@@ -19,7 +19,7 @@ public class Paws
     /// <param name="logTime"> Include the time in the log </param>
     /// <param name="logPath"> Destination for log files (not file) </param>
     /// <param name="DefaultLevel"> Default log level </param>
-    public static void Setup(bool logToFile = false, bool logTime = false, string logPath = "", Levels DefaultLevel = Levels.Info)
+    public static void Setup(bool logToFile = false, bool logTime = false, string logPath = "log/", Levels DefaultLevel = Levels.Info)
     {
         // Set the values for the logger
         _logToFile = logToFile;
@@ -33,6 +33,29 @@ public class Paws
         // Set initialized to true
         _initialized = true;
     }
+
+    #region Specific Level Log Methods
+    /// <summary> Log an error message to the console. </summary>
+    /// <param name="message"> The message to log. </param>
+    /// <returns> The message that was logged represented as a string. </returns>
+    public static string Error<T>(T value) => Log(value, Levels.Error);
+    /// <summary> Log a warning message to the console. </summary>
+    /// <param name="message"> The message to log. </param>
+    /// <returns> The message that was logged represented as a string. </returns>
+    public static string Warn<T>(T value) => Log(value, Levels.Warn);
+    /// <summary> Log an info message to the console. </summary>
+    /// <param name="message"> The message to log. </param>
+    /// <returns> The message that was logged represented as a string. </returns>
+    public static string Info<T>(T value) => Log(value, Levels.Info);
+    /// <summary> Log a message to the console. </summary>
+    /// <param name="message"> The message to log. </param>
+    /// <returns> The message that was logged represented as a string. </returns>
+    public static string Debug<T>(T value) => Log(value, Levels.Debug);
+    /// <summary> Log a message to the console (using default message priority). </summary>
+    /// <param name="message"> The message to log. </param>
+    /// <returns> The message that was logged represented as a string. </returns>
+    public static string Log<T>(T value) => Log(value, _DefaultLevel);
+    #endregion
 
     /// <summary> Log a message to the console. </summary>
     /// <param name"paws"> The Paws instance </param>
